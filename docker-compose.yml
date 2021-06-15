@@ -17,11 +17,11 @@ services:
     environment:
       - CASC_JENKINS_CONFIG=/var/jenkins_conf
       - Jenkins_Password
-      - compute_engine_sa=/sharedjenkins/JenkinsCasC/secrets/cred.json
+      - compute_engine_sa=/shared/jenkins/JenkinsCasC/secrets/cred.json
     #  - Github_Password
 secrets: #Be careful with newlines in your secrets, make sure to remove them before running docker-compose up.
   github_password:
-    file: /sharedjenkins/JenkinsCasC/secrets/github
+    file: /shared/jenkins/JenkinsCasC/secrets/github
 #   adminpw:
 #     file: /var/praqma-jenkins-casc/secrets/adminpw
 #   agent_private_key: #This should point to the private key you want your jenkins master to use when connecting to slaves. So in AWS for example this would be your .pem file
