@@ -4,14 +4,14 @@ jenkins:
   numExecutors: 1
   mode: NORMAL
   scmCheckoutRetryCount: 3
-  labelString: "master-label"  
+  labelString: "master-label"
 
   securityRealm:
     local:
       allowsSignup: false
       users:
-       - id: JenkinsUser
-         password: ${Jenkins_Password}
+        - id: JenkinsUser
+          password: ${Jenkins_Password}
 
   authorizationStrategy:
     loggedInUsersCanDoAnything:
@@ -22,70 +22,60 @@ jenkins:
   disableRememberMe: false
 
   remotingSecurity:
-    enabled: true 
+    enabled: true
 
   clouds:
-  - computeEngine:
-      cloudName: "gce"
-      configurations:
-      - bootDiskAutoDelete: true
-        bootDiskSizeGb: 10
-        bootDiskSizeGbStr: "10"
-        bootDiskSourceImageName: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/images/java-node"
-        bootDiskSourceImageProject: "my-second-project-314314"
-        bootDiskType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-f/diskTypes/pd-balanced"
-        description: "Ubuntu agent"
-        javaExecPath: "java"
-        labelSet:
-        - name: "Java11"
-        labelString: "Java11"
-        labels: "Java11"
-        launchTimeoutSeconds: 300
-        launchTimeoutSecondsStr: "300"
-        machineType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-f/machineTypes/n1-standard-1"
-        mode: NORMAL
-        namePrefix: "ubuntu-2004"
-        networkConfiguration:
-          autofilled:
-            network: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/networks/custom-network"
-            subnetwork: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/regions/us-central1/subnetworks/us-central"
-        networkTags: "ssh"
-        numExecutors: 1
-        numExecutorsStr: "1"
-        region: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/regions/us-central1"
-        retentionTimeMinutes: 6
-        retentionTimeMinutesStr: "6"
-        runAsUser: "jenkins"
-        sshKeyPair: |-
-          FAILED TO EXPORT
-          com.google.jenkins.plugins.computeengine.InstanceConfiguration#sshKeyPair: No configurator found for type class com.google.jenkins.plugins.computeengine.ssh.GoogleKeyPair
-        useInternalAddress: true
-        zone: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-f"
-      credentialsId: "my-second-project-314314"
-      instanceCapStr: "2"
-      instanceId: "f301d0f9-aed2-4e1c-a95b-8272f4c31e26"
-      projectId: "my-second-project-314314"   
+    - computeEngine:
+        cloudName: "gce"
+        configurations:
+          - bootDiskAutoDelete: true
+            bootDiskSizeGb: 10
+            bootDiskSizeGbStr: "10"
+            bootDiskSourceImageName: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/images/java-node"
+            bootDiskSourceImageProject: "my-second-project-314314"
+            bootDiskType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-f/diskTypes/pd-balanced"
+            description: "Ubuntu agent"
+            javaExecPath: "java"
+            labelSet:
+              - name: "Java11"
+            labelString: "Java11"
+            labels: "Java11"
+            launchTimeoutSeconds: 300
+            launchTimeoutSecondsStr: "300"
+            machineType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-f/machineTypes/n1-standard-1"
+            mode: NORMAL
+            namePrefix: "ubuntu-2004"
+            networkConfiguration:
+              autofilled:
+                network: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/networks/custom-network"
+                subnetwork: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/regions/us-central1/subnetworks/us-central"
+            networkTags: "ssh"
+            numExecutors: 1
+            numExecutorsStr: "1"
+            region: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/regions/us-central1"
+            retentionTimeMinutes: 6
+            retentionTimeMinutesStr: "6"
+            runAsUser: "jenkins"
+            sshKeyPair: |-
+              FAILED TO EXPORT
+              com.google.jenkins.plugins.computeengine.InstanceConfiguration#sshKeyPair: No configurator found for type class com.google.jenkins.plugins.computeengine.ssh.GoogleKeyPair
+            useInternalAddress: true
+            zone: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-f"
+        credentialsId: "my-second-project-314314"
+        instanceCapStr: "2"
+        instanceId: "f301d0f9-aed2-4e1c-a95b-8272f4c31e26"
+        projectId: "my-second-project-314314"
 
 credentials:
   system:
     domainCredentials:
       - credentials:
-        - usernamePassword:
-          description: "Login details for Github"
-          id: "GithubLogin"
-          password: $github_password
-          scope: GLOBAL
-          username: "yas.hashmi@gmail.com"
-        - googleRobotPrivateKey:
-            module: |-
-              FAILED TO EXPORT
-              com.google.jenkins.plugins.credentials.oauth.GoogleRobotPrivateKeyCredentials#module: No configurator found for type class com.google.jenkins.plugins.credentials.oauth.GoogleRobotCredentialsModule
-            projectId: "my-second-project-314314"
-            serviceAccountConfig:
-              json:
-                filename: ${compute_engine_sa}
-                #secretJsonKey: "{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}"
-
+          - usernamePassword:
+            description: "Login details for Github"
+            id: "GithubLogin"
+            password: $github_password
+            scope: GLOBAL
+            username: "yas.hashmi@gmail.com"
 
 tool:
   git:
