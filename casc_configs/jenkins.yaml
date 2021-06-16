@@ -5,7 +5,7 @@ credentials:
           - usernamePassword:
               description: "Git Login details for"
               id: "GitHubLogin"
-              password: ${github_password}
+              password: ${GITHUB}
               scope: GLOBAL
               username: "yas.hashmi@gmail.com"
           - googleRobotPrivateKey:
@@ -13,7 +13,7 @@ credentials:
               serviceAccountConfig:
                 json:
                   #filename: ${compute_engine_sa}
-                  secretJsonKey: "{${compute_engine_sa}}"
+                  secretJsonKey: ${COMPUTE_ENGINE_SA}
 
 jenkins:
   systemMessage: "\n\nWelcome to the Jenkins!\n\n"
@@ -28,7 +28,7 @@ jenkins:
       allowsSignup: false
       users:
         - id: JenkinsUser
-          password: ${Jenkins_Password}
+          password: ${JENKINS_USER}
 
   authorizationStrategy:
     loggedInUsersCanDoAnything:
