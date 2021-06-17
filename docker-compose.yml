@@ -25,7 +25,7 @@ secrets: #Be careful with newlines in your secrets, make sure to remove them bef
   GITHUB:
     file: /shared/jenkins/JenkinsCasC/secrets/github
   COMPUTE_ENGINE_SA:
-    file: /shared/jenkins/JenkinsCasC/secrets/cred.json
+    file: /shared/jenkins/JenkinsCasC/secrets/cred
   JENKINS_USER:
     file: /shared/jenkins/JenkinsCasC/secrets/jenkins
 
