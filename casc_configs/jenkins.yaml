@@ -57,6 +57,7 @@ jenkins:
               - name: "Java11"
             labelString: "Java11"
             labels: "Java11"
+            externalAddress: true
             launchTimeoutSeconds: 300
             launchTimeoutSecondsStr: "300"
             machineType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-f/machineTypes/n1-standard-1"
@@ -68,6 +69,9 @@ jenkins:
                 subnetwork: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/regions/us-central1/subnetworks/us-central"
             networkTags: "ssh"
             numExecutors: 1
+            startupScript: |
+              sudo su - jenkins -c 'git config --global user.name "Yasub"'
+              sudo su - jenkins -c 'git config --global user.email "yas.hashmi@gmail.com"'
             numExecutorsStr: "1"
             region: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/regions/us-central1"
             retentionTimeMinutes: 6
@@ -79,6 +83,18 @@ jenkins:
         instanceCapStr: "2"
         instanceId: "f301d0f9-aed2-4e1c-a95b-8272f4c31e26"
         projectId: "my-second-project-314314"
+
+unclassified:
+  gitSCM:
+    addGitTagAction: false
+    allowSecondFetch: false
+    createAccountBasedOnEmail: false
+    disableGitToolChooser: false
+    globalConfigEmail: "yas.hashmi@gmail.com"
+    globalConfigName: "Yasub Hashmi"
+    hideCredentials: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
 
 tool:
   git:
