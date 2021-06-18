@@ -40,6 +40,12 @@ jenkins:
 
   remotingSecurity:
     enabled: true
+  
+  globalNodeProperties:
+  - envVars:
+      env:
+      - key: "SONAR_TOKEN"
+        value: ${SONAR_TOKEN}
 
   clouds:
     - computeEngine:
