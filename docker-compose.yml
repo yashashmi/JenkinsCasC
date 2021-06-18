@@ -16,6 +16,7 @@ services:
       - JENKINS_USER
     environment:
       - CASC_JENKINS_CONFIG=/var/jenkins_conf
+      - SONAR_TOKEN
 
 secrets:
   GITHUB:

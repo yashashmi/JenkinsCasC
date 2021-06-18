@@ -9,7 +9,11 @@ pipelineJob('''UtilityChargesPipelineTomcat''') {
         cpsScm {
             scm {
                 git('''https://github.com/yashashmi/UtilityChargesCalculator.git''')
+                 { node -> // is hudson.plugins.git.GitSCM
+                    node / gitConfigName('Yasub Hashmi')
+                    node / gitConfigEmail('yas.hashmi@gmail.com')
+                 }
             }
         }
-    }
+        }
 }
