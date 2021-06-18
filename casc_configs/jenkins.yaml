@@ -69,9 +69,6 @@ jenkins:
                 subnetwork: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/regions/us-central1/subnetworks/us-central"
             networkTags: "ssh"
             numExecutors: 1
-            startupScript: |
-              sudo su - jenkins -c 'git config --global user.name "Yasub"'
-              sudo su - jenkins -c 'git config --global user.email "yas.hashmi@gmail.com"'
             numExecutorsStr: "1"
             region: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/regions/us-central1"
             retentionTimeMinutes: 6
