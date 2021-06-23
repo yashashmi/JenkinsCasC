@@ -40,12 +40,12 @@ jenkins:
 
   remotingSecurity:
     enabled: true
-  
+
   globalNodeProperties:
-  - envVars:
-      env:
-      - key: "SONAR_TOKEN"
-        value: ${SONAR_TOKEN}
+    - envVars:
+        env:
+          - key: "SONAR_TOKEN"
+            value: ${SONAR_TOKEN}
 
   clouds:
     - computeEngine:
@@ -82,6 +82,36 @@ jenkins:
             runAsUser: "jenkins"
             useInternalAddress: true
             zone: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-f"
+          - bootDiskAutoDelete: true
+            bootDiskSizeGb: 10
+            bootDiskSizeGbStr: "10"
+            bootDiskSourceImageName: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/images/docker-instance-image"
+            bootDiskSourceImageProject: "my-second-project-314314"
+            bootDiskType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-c/diskTypes/pd-balanced"
+            description: "A tomcat server"
+            externalAddress: true
+            javaExecPath: "java"
+            labelSet:
+              - name: "tomcat85"
+            labelString: "tomcat85"
+            labels: "tomcat85"
+            launchTimeoutSeconds: 300
+            launchTimeoutSecondsStr: "300"
+            machineType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-c/machineTypes/n1-standard-1"
+            mode: NORMAL
+            namePrefix: "tomcat-server"
+            networkConfiguration:
+              autofilled:
+                network: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/networks/custom-network"
+                subnetwork: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/regions/us-central1/subnetworks/us-central"
+            networkTags: "ssh"
+            numExecutors: 1
+            numExecutorsStr: "1"
+            region: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/regions/us-central1"
+            retentionTimeMinutes: 6
+            retentionTimeMinutesStr: "6"
+            runAsUser: "jenkins"
+            zone: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-c"
         credentialsId: "my-second-project-314314"
         instanceCapStr: "2"
         instanceId: "f301d0f9-aed2-4e1c-a95b-8272f4c31e26"
