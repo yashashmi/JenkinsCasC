@@ -29,6 +29,9 @@ jenkins:
       users:
         - id: JenkinsUser
           password: ${JENKINS_USER}
+          properties:
+          - timezone:
+              timeZoneName: "Asia/Calcutta"
 
   authorizationStrategy:
     loggedInUsersCanDoAnything:
