@@ -34,3 +34,4 @@ workflow-support:latest
 google-compute-engine:latest
 workflow-aggregator:latest
 job-dsl:latest
+test-results-analyzer:0.3.5

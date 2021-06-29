@@ -6,6 +6,6 @@ ENV JENKINS_HOME /var/jenkins_home
 
 ARG JAVA_OPTS
 ENV JAVA_OPTS "-Djenkins.install.runSetupWizard=false ${JAVA_OPTS:-}"
-ENV JAVA_ARGS "-Dorg.apache.commons.jelly.tags.fmt.timeZone=Asia/Calcuta"
+ENV JAVA_ARGS "-Dorg.apache.commons.jelly.tags.fmt.timeZone=Asia/Calcutta"
 
 RUN xargs /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins_extra.txt
