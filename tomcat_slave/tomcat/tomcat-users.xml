@@ -7,7 +7,7 @@
 	      <role rolename="manager-gui"/>
 	      <role rolename="admin-gui"/>
 	      <role rolename="manager-script"/>
-	      <user username="yasub" password="App@1234" roles="manager-gui,admin-gui,manager-script"/>
+	      <user username="app-manager" password="APP_MANAGER_PASSWORD" roles="manager-gui,admin-gui,manager-script"/>
 
 
 <!--

@@ -3,11 +3,17 @@ credentials:
     domainCredentials:
       - credentials:
           - usernamePassword:
-              description: "Git Login details for"
+              description: "Login details for Github"
               id: "GitHubLogin"
               password: ${GITHUB}
               scope: GLOBAL
               username: "yas.hashmi@gmail.com"
+          - usernamePassword:
+              description: "Tomcat Apache Manager creds"
+              id: "tomcat-manager"
+              password: ${TOMCAT_MANAGER}
+              scope: GLOBAL
+              username: "tomcat"
           - googleRobotPrivateKey:
               projectId: "my-second-project-314314"
               serviceAccountConfig:
