@@ -20,6 +20,12 @@ credentials:
                 json:
                   #filename: ${compute_engine_sa}
                   secretJsonKey: ${COMPUTE_ENGINE_SA}
+          - file:
+              description: "Service Account Key for App Engine Deployment"
+              fileName: "appengine_ce_sa_key.json"
+              id: "AppEngineServiceKey"
+              scope: GLOBAL
+              secretBytes: ${APP_ENGINE_SA}
 
 jenkins:
   systemMessage: "\n\nWelcome to the Jenkins!\n\n"

@@ -15,6 +15,7 @@ services:
       - COMPUTE_ENGINE_SA
       - JENKINS_USER
       - TOMCAT_MANAGER
+      - APP_ENGINE_SA
     environment:
       - CASC_JENKINS_CONFIG=/var/jenkins_conf
       - SONAR_TOKEN
@@ -28,6 +29,8 @@ secrets:
     file: /shared/jenkins/JenkinsCasC/secrets/jenkins
   TOMCAT_MANAGER:
     file: /shared/jenkins/JenkinsCasC/secrets/tomcat
+  APP_ENGINE_SA:
+    file: /shared/jenkins/JenkinsCasC/secrets/appEngineSecret
 
 volumes:
   jenkins_home:
