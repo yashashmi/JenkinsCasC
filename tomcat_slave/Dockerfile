@@ -1,4 +1,4 @@
-FROM tomcat:8.5
+FROM tomcat:9.0
 
 RUN mv /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/
 COPY tomcat/tomcat-users.xml /usr/local/tomcat/conf/
