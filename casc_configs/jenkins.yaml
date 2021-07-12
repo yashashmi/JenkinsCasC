@@ -30,7 +30,7 @@ credentials:
 jenkins:
   systemMessage: "\n\nWelcome to the Jenkins!\n\n"
 
-  numExecutors: 1
+  numExecutors: 0
   mode: NORMAL
   scmCheckoutRetryCount: 3
   labelString: "master-label"
@@ -69,10 +69,10 @@ jenkins:
           - bootDiskAutoDelete: true
             bootDiskSizeGb: 10
             bootDiskSizeGbStr: "10"
-            bootDiskSourceImageName: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/images/java-node"
+            bootDiskSourceImageName: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/images/java-build-node-jenkins-v3"
             bootDiskSourceImageProject: "my-second-project-314314"
             bootDiskType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-f/diskTypes/pd-balanced"
-            description: "Ubuntu agent"
+            description: "Ubuntu Java 11 build stack agent for Jenkins"
             javaExecPath: "java"
             labelSet:
               - name: "Java11"
@@ -83,7 +83,7 @@ jenkins:
             launchTimeoutSecondsStr: "300"
             machineType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-f/machineTypes/n1-standard-1"
             mode: NORMAL
-            namePrefix: "ubuntu-2004"
+            namePrefix: "ubuntu-java11"
             networkConfiguration:
               autofilled:
                 network: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/networks/custom-network"
@@ -100,16 +100,16 @@ jenkins:
           - bootDiskAutoDelete: true
             bootDiskSizeGb: 10
             bootDiskSizeGbStr: "10"
-            bootDiskSourceImageName: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/images/docker-instance-image"
+            bootDiskSourceImageName: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/images/docker-image-jenkins-v1"
             bootDiskSourceImageProject: "my-second-project-314314"
             bootDiskType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-c/diskTypes/pd-balanced"
             description: "A tomcat server"
             externalAddress: true
             javaExecPath: "java"
             labelSet:
-              - name: "tomcat85"
-            labelString: "tomcat85"
-            labels: "tomcat85"
+              - name: "tomcat9"
+            labelString: "tomcat9"
+            labels: "tomcat9"
             launchTimeoutSeconds: 300
             launchTimeoutSecondsStr: "300"
             machineType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-c/machineTypes/n1-standard-1"
