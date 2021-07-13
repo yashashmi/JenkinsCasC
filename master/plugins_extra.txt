@@ -38,3 +38,4 @@ test-results-analyzer:0.3.5
 cucumber-reports:5.5.0
 performance:3.19
 htmlpublisher:1.25
+delivery-pipeline-plugin:1.4.2
