@@ -15,7 +15,7 @@ credentials:
               scope: GLOBAL
               username: "tomcat"
           - googleRobotPrivateKey:
-              projectId: "my-second-project-314314"
+              projectId: "jenkins-325510"
               serviceAccountConfig:
                 json:
                   #filename: ${compute_engine_sa}
@@ -82,9 +82,9 @@ jenkins:
           - bootDiskAutoDelete: true
             bootDiskSizeGb: 10
             bootDiskSizeGbStr: "10"
-            bootDiskSourceImageName: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/images/java-build-node-jenkins-v3"
-            bootDiskSourceImageProject: "my-second-project-314314"
-            bootDiskType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-f/diskTypes/pd-balanced"
+            bootDiskSourceImageName: "https://console.cloud.google.com/compute/imagesDetail/projects/jenkins-325510/global/images/java-build-node-jenkins-v3"
+            bootDiskSourceImageProject: "jenkins-325510"
+            bootDiskType: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/zones/us-central1-f/diskTypes/pd-balanced"
             description: "Ubuntu Java 11 build stack agent for Jenkins"
             javaExecPath: "java"
             labelSet:
@@ -94,28 +94,28 @@ jenkins:
             externalAddress: true
             launchTimeoutSeconds: 300
             launchTimeoutSecondsStr: "300"
-            machineType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-f/machineTypes/n1-standard-1"
+            machineType: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/zones/us-central1-f/machineTypes/n1-standard-1"
             mode: NORMAL
             namePrefix: "ubuntu-java11"
             networkConfiguration:
               autofilled:
-                network: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/networks/custom-network"
-                subnetwork: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/regions/us-central1/subnetworks/us-central"
+                network: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/global/networks/custom-network"
+                subnetwork: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/regions/us-central1/subnetworks/us-central"
             networkTags: "ssh"
             numExecutors: 1
             numExecutorsStr: "1"
-            region: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/regions/us-central1"
+            region: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/regions/us-central1"
             retentionTimeMinutes: 6
             retentionTimeMinutesStr: "6"
             runAsUser: "jenkins"
             useInternalAddress: true
-            zone: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-f"
+            zone: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/zones/us-central1-f"
           - bootDiskAutoDelete: true
             bootDiskSizeGb: 10
             bootDiskSizeGbStr: "10"
-            bootDiskSourceImageName: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/images/docker-image-jenkins-v1"
-            bootDiskSourceImageProject: "my-second-project-314314"
-            bootDiskType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-c/diskTypes/pd-balanced"
+            bootDiskSourceImageName: "https://console.cloud.google.com/compute/imagesDetail/projects/jenkins-325510/global/images/docker-image-jenkins-v1"
+            bootDiskSourceImageProject: "jenkins-325510"
+            bootDiskType: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/zones/us-central1-c/diskTypes/pd-balanced"
             description: "A tomcat server"
             externalAddress: true
             javaExecPath: "java"
@@ -125,25 +125,25 @@ jenkins:
             labels: "tomcat9"
             launchTimeoutSeconds: 300
             launchTimeoutSecondsStr: "300"
-            machineType: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-c/machineTypes/n1-standard-1"
+            machineType: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/zones/us-central1-c/machineTypes/n1-standard-1"
             mode: NORMAL
             namePrefix: "tomcat-server"
             networkConfiguration:
               autofilled:
-                network: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/global/networks/custom-network"
-                subnetwork: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/regions/us-central1/subnetworks/us-central"
+                network: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/global/networks/custom-network"
+                subnetwork: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/regions/us-central1/subnetworks/us-central"
             networkTags: "ssh http-server"
             numExecutors: 1
             numExecutorsStr: "1"
-            region: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/regions/us-central1"
+            region: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/regions/us-central1"
             retentionTimeMinutes: 6
             retentionTimeMinutesStr: "6"
             runAsUser: "jenkins"
-            zone: "https://www.googleapis.com/compute/v1/projects/my-second-project-314314/zones/us-central1-c"
-        credentialsId: "my-second-project-314314"
+            zone: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/zones/us-central1-c"
+        credentialsId: "jenkins-325510"
         instanceCapStr: "2"
         instanceId: "f301d0f9-aed2-4e1c-a95b-8272f4c31e26"
-        projectId: "my-second-project-314314"
+        projectId: "jenkins-325510"
 
 unclassified:
   gitSCM:
