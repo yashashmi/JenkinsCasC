@@ -35,18 +35,18 @@ jenkins:
   scmCheckoutRetryCount: 3
   labelString: "master-label"
 
-  views:
-    - workflowPipeline:
-        componentSpecs:
-        - job: "UtilityChargesPipelineTomcat"
-          name: "Full pipeline"
-        name: "UtilityCharges Pipeline"
-        noOfColumns: 3
-        showChanges: true
-        updateInterval: 5
-    - all:
-        name: "all"
-  viewsTabBar: "standard"
+  # views:
+  #   - workflowPipeline:
+  #       componentSpecs:
+  #       - job: "UtilityChargesPipelineTomcat"
+  #         name: "Full pipeline"
+  #       name: "UtilityCharges Pipeline"
+  #       noOfColumns: 3
+  #       showChanges: true
+  #       updateInterval: 5
+  #   - all:
+  #       name: "all"
+  # viewsTabBar: "standard"
   
   securityRealm:
     local:
