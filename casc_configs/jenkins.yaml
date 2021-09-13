@@ -82,7 +82,7 @@ jenkins:
           - bootDiskAutoDelete: true
             bootDiskSizeGb: 10
             bootDiskSizeGbStr: "10"
-            bootDiskSourceImageName: "https://console.cloud.google.com/compute/imagesDetail/projects/jenkins-325510/global/images/java-build-node-jenkins-v3"
+            bootDiskSourceImageName: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/global/images/java-build-node-jenkins-v3"
             bootDiskSourceImageProject: "jenkins-325510"
             bootDiskType: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/zones/us-central1-f/diskTypes/pd-balanced"
             description: "Ubuntu Java 11 build stack agent for Jenkins"
@@ -113,7 +113,7 @@ jenkins:
           - bootDiskAutoDelete: true
             bootDiskSizeGb: 10
             bootDiskSizeGbStr: "10"
-            bootDiskSourceImageName: "https://console.cloud.google.com/compute/imagesDetail/projects/jenkins-325510/global/images/docker-image-jenkins-v1"
+            bootDiskSourceImageName: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/global/images/java-build-node-jenkins-v3"
             bootDiskSourceImageProject: "jenkins-325510"
             bootDiskType: "https://www.googleapis.com/compute/v1/projects/jenkins-325510/zones/us-central1-c/diskTypes/pd-balanced"
             description: "A tomcat server"
