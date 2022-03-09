@@ -28,7 +28,7 @@ RUN jenkins-plugin-cli --plugins "credentials-binding:latest "\
 "ssh-credentials:latest "\
 "ssh-slaves:latest "\
 "timestamper:latest "\
-"jobs-dsl:latest "\
+"job-dsl:latest "\
 "pipeline-stage-view:latest "\
 "workflow-aggregator:latest "\
 "google-compute-engine:latest "\
