@@ -4,7 +4,7 @@ pipelineJob('''UtilityChargesPipelineTomcat''') {
         numToKeep(5)
         artifactNumToKeep(1)
     }
-    concurrentBuild(false)
+    
         definition {
         cpsScm {
             scm {
